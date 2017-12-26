@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server-sent Event Demo</title>
+</head>
+<body>
+    <h1>Server-sent Event使用样例</h1>
+    <p id="result"></p>
+    <p id="p1"></p>
+    <script type="text/javascript">if(typeof (EventSource) !== "undefined"){document.getElementById("p1").innerHTML="可以使用sse" + "<br/>";varsource = new EventSource("/cgi-bin/capture");source.onmessage=function (event) {document.getElementById("result").innerHTML+=event.data + "<br/>";};}else{document.getElementById("result").innerHTML = "对不起，您的浏览器不支持Server-sent Event";}</script>
+</body>
+</html>

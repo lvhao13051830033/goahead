@@ -1,0 +1,11 @@
+/*************************************
+*This is a css file decorates elements 
+*of work.html
+*
+*author:zxz
+*fileName:IR600.css
+**************************************/
+.copyright{
+   font-family: Arial; font-size: 11px; font-weight: normal; text-decoration: none; color: #696969;
+   text-align:right;
+}

@@ -1,0 +1,56 @@
+/*
+*字体是utf-8
+ */
+messageGrid = function(lang){
+
+
+    function status_renderer(value)
+   {
+      if (value==0)
+      {
+         return "<img src='images/share/ok.png'/>";
+      }
+      else
+      {
+         return "<img src='images/share/no.png'/>";
+      }
+   }
+
+    var columns = [
+        {header:(lang==0)?'状态':'status',width: 40, renderer:status_renderer, sortable: true, dataIndex: 'status'},
+        {id:'event',header: (lang==0)?'事件':'event', width: 50, sortable: true, dataIndex: 'event'},
+        {header:(lang==0)?'时间':'Time', width:130, sortable: true, dataIndex: 'time'}
+    ];
+
+    
+    messageGrid.superclass.constructor.call(this, {
+        store: new Ext.data.Store({
+            reader: new Ext.data.ArrayReader({}, [
+                   {name: 'status'},
+                   {name: 'event'},
+                   {name: 'time'}
+              ]),
+            data: [
+              
+            ]
+        }),
+        columns: columns,
+        autoExpandColumn: 'event',
+        height:351,
+        width:700
+    });
+}
+
+var MsgRecord=Ext.data.Record.create([
+    {name:'status', mapping:'status', type:'int'},
+    {name:'event', mapping:'event', type:'string'},
+    {name:'time', mapping:'time', type:'string'}
+    ]);
+
+Ext.extend(messageGrid, Ext.grid.GridPanel,{
+   	addMsg:function(s,e)
+   	{
+   		var dt=new Date();
+   		this.getStore().insert(0,new MsgRecord({status:s,event:e, time:dt.format("Y-m-d H:i:s")}));
+   	}
+});

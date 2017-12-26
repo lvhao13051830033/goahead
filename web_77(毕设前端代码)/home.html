@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Welcome to Circloop</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- ** CSS ** -->
+    <!-- base library -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <!-- user defined -->
+    <link rel="stylesheet" type="text/css" href="css/IR600.css" />
+    
+    <!-- base js library -->
+    <script type="text/javascript" src="js/jsonrpc.js"></script>
+    
+    <!-- user defined JS-->
+    <script type="text/javascript" src="js/login.js"></script>
+    
+  </head>
+  
+  <body>
+  <div style="text-align:right;">
+   <table id="wrapper">
+	<tr>
+	<tr><td height="130"> &nbsp;</td></tr>
+    <td align="center" valign="middle">
+    <div id="LoginDiv"" style="align:right">    
+    <div style="clear:both;"></div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="inner">
+       <tr>
+        <td height="353" align="right" valign="middle" background="images/bgimages/Login1_bg.gif"></td>
+        <td height="353" align="right" valign="middle" background="images/bgimages/Login1_bg.gif"><img src="images/bgimages/login_IR600.bmp" width="432" height="353" /></td>
+	    <td width="425" height="353" align="center" valign="top" style="background: url(images/bgimages/Login2c_bg.gif) top left no-repeat">
+	    <table width="425" border="0" cellspacing="0" cellpadding="0">
+	    <tr>
+		<td width="16" align="left" valign="middle"><img src="images/bgimages/Login2a_bg.gif" width="16" height="263" /></td>
+		<td align="right" valign="top" background="images/bgimages/Login2_bg.gif">
+		<div id="authenticationDiv" style="display:block; margin-top:0px;  height:200px;"><div style=" height:48px; clear:both;"></div>
+		<div id="loginHolder">
+			<table width="100%" height="50" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td id="username_txt" width="57%" align="left" valign="top" class="UIDStyle">用户名</td>
+				<td width="43%" align="right" valign="top">
+					<table id="name_table" width="152" height="14" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="6" align="left" valign="top"><img src="images/bgimages/left.jpg" width="7" height="18" align="absmiddle" /></td>
+						<td align="center" valign="top"><input name="userName" id="username_input" type="text" class="loginInput" /></td>
+						<td width="6" align="right" valign="top"><img src="images/bgimages/right.jpg" width="7" height="18" align="absmiddle" /></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td id="password_txt" align="left" valign="top" class="UIDStyle">密 码</td>
+				<td align="right" valign="top">
+					<table id="passwd_table" width="152" height="16" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="6" align="left" valign="top"><img src="images/bgimages/left.jpg" width="7" height="18" /></td>
+						<td align="center" valign="top"><input id="passwd_input" name="password" type="password" class="loginInputPass" /></td>
+						<td width="6" align="right" valign="top"><img src="images/bgimages/right.jpg" width="7" height="18" /></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+		</div>
+		<div style="clear:both;"></div>
+		<div id="loginSubmit"><input id="login_image" type="image" onclick="loginSubmit()" src="images/bgimages/Login_cn.gif" width="105" height="33" border="0" /></div>
+		<div style="clear:both;"></div>
+    <div id="langSubmit"><input id="lang_image" type="image" onclick="langSubmit()" src="images/bgimages/lang_en.jpg" width="105" height="33" border="0" /></div>
+		<div style="clear:both;height:5px;"></div>
+		<div style="clear:both;"></div>
+	  <div id="errormsg"> </div>
+		</div>
+		<div style="clear:both;"></div>
+		</td>
+            <td width="16" align="right" valign="middle"><img src="images/bgimages/Login2b_bg.gif" width="16" height="263" /></td>
+          </tr>
+        </table>
+		<span class="copyright1">
+	    <html>
+		<body>
+			Copyright © 2000-2009  <a href="http://www.circloop.com.cn"  target="_blank" STYLE="text-decoration: none"><font color="#808080">Circloop Inc.</font></a> All rights reserved
+		</body>
+	   </html>
+       </span>
+	</td>
+        <td width="139" height="353" align="right" valign="middle"><img src="images/bgimages/Login3_bg.gif" width="139" height="353" /></td>
+      </tr>
+    </table>
+    </div>
+    </td>
+  </tr>
+</table>
+</div>
+  </body>
+</html>
